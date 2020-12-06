@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import {Container, AppBar, Typography, Grow, Grid} from "@material-ui/core";
 // Grow: provides simple animation
 import {useDispatch} from "react-redux";
@@ -10,9 +10,12 @@ import memories from "./images/memories.png";
 import useStyles from "./styles";
 
 const App = () => {
+  const [currentId, setCurrentId] = useState(null);
   const classes = useStyles();
   const dispatch = useDispatch();
 
+  // add currentId to end, app will update when current Id changes
+  // so if we update a post for example, currentId changes, and all posts are fetched again
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
@@ -34,10 +37,10 @@ const App = () => {
         <Container>
           <Grid container justify='space-between' alignItems='stretch'>
             <Grid xs='12' sm='7'>
-              <Posts />
+              <Posts setCurrentId={setCurrentId} />
             </Grid>
             <Grid xs='12' sm='4'>
-              <Form />
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
             </Grid>
           </Grid>
         </Container>

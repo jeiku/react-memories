@@ -7,13 +7,13 @@ import postRoutes from "./routes/posts.js";
 
 const app = express();
 
-// starting path inside of posts.js, every route inside of postRoutes will start with /posts
-app.use("/posts", postRoutes);
-
 // we will be sending large images, so set limit
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());
+
+// starting path inside of posts.js, every route inside of postRoutes will start with /posts
+app.use("/posts", postRoutes);
 
 // set up database
 // https://www.mongodb.com/cloud/atlas
