@@ -17,6 +17,11 @@ app.use(cors());
 // starting path inside of posts.js, every route inside of postRoutes will start with /posts
 app.use("/posts", postRoutes);
 
+// deploying? add this
+app.get("/", (req, res) => {
+  res.send("Hello, API");
+});
+
 // set up database
 // https://www.mongodb.com/cloud/atlas
 
