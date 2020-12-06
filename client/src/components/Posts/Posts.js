@@ -15,7 +15,7 @@ const Posts = ({setCurrentId}) => {
   return (
     // if there are 0 posts, show Circular Progress, else..
     !posts.length ? (
-      <CircularProgress color='white' />
+      <CircularProgress color='secondary' />
     ) : (
       <Grid
         className={classes.container}

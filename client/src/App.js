@@ -18,7 +18,7 @@ const App = () => {
   // so if we update a post for example, currentId changes, and all posts are fetched again
   useEffect(() => {
     dispatch(getPosts());
-  }, [dispatch]);
+  }, [dispatch, currentId]);
 
   return (
     <Container maxWidth='lg'>
