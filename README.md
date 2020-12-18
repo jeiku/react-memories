@@ -39,7 +39,7 @@
 
 ## About The Project
 
-<img src="readme-images/project-screenshot.png" alt="Project Screenshot" width="250">
+<img src="readme-images/project-screenshot.png" alt="Project Screenshot" width="700">
 <br />
 
 This is just a simple Fullstack MERN app built in React for practice. Feel free to check it out!
@@ -68,11 +68,9 @@ To get a local copy up and running follow these simple steps.
    npm install
    ```
 3. Add proper variables in '.env'
-
-```JS
-CONNECTION_URL = 'enter url'
-```
-
+   ```JS
+   CONNECTION_URL = 'enter url'
+   ```
 4. Start server
    ```sh
    cd server
