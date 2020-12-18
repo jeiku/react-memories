@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const url = "react-memories-practice.herokuapp.com/posts";
+// const url = "react-memories-practice.herokuapp.com/posts";
+const url = "http://localhost:5000/posts";
 
 // all actions towards our backend are done with redux
 export const fetchPosts = () => axios.get(url);
